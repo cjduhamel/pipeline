@@ -32,8 +32,7 @@ TRAINER_MAP = {
 parser = argparse.ArgumentParser(description="Run grid search training pipeline")
 
 # Optional positional arguments with defaults
-parser.add_argument("config_file", nargs="?", default="run_configs/noise_comp_config.json", help="Path to config JSON")
-parser.add_argument("results_filename", nargs="?", default="logs/log.csv", help="Path to results CSV")
+parser.add_argument("config_file", nargs="?", default="noise_comp_config.json", help="Path to config JSON")
 parser.add_argument("-m", "--models", action="store_true", help="Keep trained models and their relevant information") # not implemented
 parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose output")
 

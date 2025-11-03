@@ -61,9 +61,9 @@ def get_nested_value(d, dotted_key):
         d = d[k]  # assumes path exists
     return d
 
-def start_pipeline(config_path, data_map, preprocessor_map, model_map, trainer_map, save_model = False):
+def start_pipeline(config_file, data_map, preprocessor_map, model_map, trainer_map, save_model = False):
     #open and load config file
-    with open(config_path, 'r') as f:
+    with open('run_configs/' + config_file, 'r') as f:
         config = json.load(f)
 
     # Verify config structure for required keys
